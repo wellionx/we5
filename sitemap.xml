@@ -20,6 +20,27 @@
     <loc>/talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2021-04-15T11:27:11+08:00</lastmod>
+  </url><url>
+    <loc>/tag/data-science/</loc>
+    <lastmod>2021-04-15T11:27:11+08:00</lastmod>
+  </url><url>
+    <loc>/post/</loc>
+    <lastmod>2021-04-15T11:27:11+08:00</lastmod>
+  </url><url>
+    <loc>/category/r/</loc>
+    <lastmod>2021-04-15T11:27:11+08:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2021-04-15T11:27:11+08:00</lastmod>
+  </url><url>
+    <loc>/post/get-your-hands-dirty-install-r-from-the-begining/</loc>
+    <lastmod>2021-04-15T11:27:11+08:00</lastmod>
+  </url><url>
+    <loc>/category/%E6%8A%80%E8%83%BD/</loc>
+    <lastmod>2021-04-15T11:27:11+08:00</lastmod>
+  </url><url>
     <loc>/publication-type/2/</loc>
     <lastmod>2021-04-09T00:00:00+00:00</lastmod>
   </url><url>
@@ -41,20 +62,11 @@
     <loc>/publication/2021-03-24-spectroscopic-estimation-of-n-remobilization/</loc>
     <lastmod>2021-04-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2021-04-09T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tag/winter-wheat/</loc>
     <lastmod>2021-04-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tag/academic/</loc>
     <lastmod>2020-12-18T20:15:02+08:00</lastmod>
-  </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2020-12-18T20:15:02+08:00</lastmod>
-  </url><url>
-    <loc>/tag/data-science/</loc>
-    <lastmod>2020-12-18T12:42:37+08:00</lastmod>
   </url><url>
     <loc>/post/draw-wheat-chart-in-r/</loc>
     <lastmod>2020-12-18T20:15:02+08:00</lastmod>
@@ -71,14 +83,8 @@
     <loc>/tag/plot/</loc>
     <lastmod>2020-12-18T20:15:02+08:00</lastmod>
   </url><url>
-    <loc>/post/</loc>
-    <lastmod>2020-12-18T20:15:02+08:00</lastmod>
-  </url><url>
     <loc>/tag/r/</loc>
     <lastmod>2020-12-18T12:42:37+08:00</lastmod>
-  </url><url>
-    <loc>/category/r/</loc>
-    <lastmod>2020-12-18T20:15:02+08:00</lastmod>
   </url><url>
     <loc>/tag/spectra/</loc>
     <lastmod>2020-07-25T21:16:12+08:00</lastmod>
@@ -88,9 +94,6 @@
   </url><url>
     <loc>/post/visualization-of-history-daily-weather/</loc>
     <lastmod>2020-12-18T11:23:45+08:00</lastmod>
-  </url><url>
-    <loc>/category/%E6%8A%80%E8%83%BD/</loc>
-    <lastmod>2020-12-18T20:15:02+08:00</lastmod>
   </url><url>
     <loc>/post/2020-12-18-pca-analysis-of-reflectance-spectra/</loc>
     <lastmod>2020-12-17T22:09:44+08:00</lastmod>

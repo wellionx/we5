@@ -5,12 +5,74 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Wei Li ©2021 </copyright><lastBuildDate>Fri, 18 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Wei Li ©2021 </copyright><lastBuildDate>Thu, 15 Apr 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu8fa43e4483d02e4bfdf294b3386ef244_148313_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
+    
+    <item>
+      <title>手把手教你安装R</title>
+      <link>/post/get-your-hands-dirty-install-r-from-the-begining/</link>
+      <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>/post/get-your-hands-dirty-install-r-from-the-begining/</guid>
+      <description>&lt;p&gt;写在前面：在正式安装R之前需要做下准备工作，下载原生的R软件以及最好用的R操作界面Rstudio。&lt;/p&gt;
+&lt;p&gt;链接地址：&lt;/p&gt;
+&lt;p&gt;R &lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/CRAN/&#34;&gt;https://mirrors.tuna.tsinghua.edu.cn/CRAN/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Rstudio &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/#download&#34;&gt;https://www.rstudio.com/products/rstudio/download/#download&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;新手在安装R时常常会犯一些错误，导致后期在使用和升级R时体验极为不佳。我这个安装教程是总结了多次安装实战经验之后写下的，希望对想学R但又无从下手的同学能有所帮助。
+另外，安装过程详细的避坑指南，可以参考谢益辉写的&lt;a href=&#34;https://bookdown.org/yihui/r-ninja/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R语言忍者秘笈&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;下面进入正式的安装教程：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;安装原生R (R-4.0.5-win.exe)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;安装时要注意一定一定一定要选择English版本&lt;/li&gt;
+&lt;li&gt;安装目录去掉版本号(C:\Program Files\R)&lt;/li&gt;
+&lt;li&gt;安装选项仅勾选Core files 和 64-bit files即可&lt;/li&gt;
+&lt;li&gt;其他配置都按照默认即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;安装Rstudio (默认安装)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;千万注意顺序，安装原生R之后，再Rstudio&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;打开并配置Rstudio，包括字体大小和package的镜像（亲测兰州大学镜像好用）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;字体配置Tools/Global Options/Appearance&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Package镜像配置Tools/Global Options/Packages&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;用户目录的设置（参考R语言忍者秘籍），具体方式如下：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;normalizePath(&#39;~&#39;) # 查看用户目录
+# 如果文件不存在，它会被自动创建
+file.edit(&#39;~/.Renviron&#39;)
+# 写入配置文件中，保存，重启R
+R_LIBS_USER=&amp;quot;~/R/libs&amp;quot; # C盘C:\Users\Wei\Documents\R\libs
+R_LIBS_USER=&amp;quot;D:/Rlibs&amp;quot; # 可以设置成自己喜欢的位置
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;之所以要单独设置一个lib path，是为了方便升级时迁移已经安装的R包。因为后期安装的R包都会优先存储到新配置的目录下。一方面更新R包的时候不需要重新安装，只需将Rlib目录下的R包文件拷贝出来即可；另一方面，附加R包与主程序包是分开的，极大的方便的包的管理。&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;检测libPaths位置是否配置成功&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;.libPaths()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输入以上代码，如显示如下内容，表示配置成功。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[1] &amp;ldquo;D:/Rlibs&amp;rdquo;    &amp;ldquo;C:/Program Files/R/library&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;如不成功，则需重启电脑后查看是否配置生效。&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Draw wheat chart in R</title>
