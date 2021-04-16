@@ -133,6 +133,8 @@ R_LIBS_USER=&amp;quot;D:/Rlibs&amp;quot; # 可以设置成自己喜欢的位置
 &lt;p&gt;[1] &amp;ldquo;D:/Rlibs&amp;rdquo;    &amp;ldquo;C:/Program Files/R/library&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;如不成功，则需重启电脑后查看是否配置生效。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;推荐R图库，有相关的图和代码
+&lt;a href=&#34;https://www.r-graph-gallery.com/index.html&#34;&gt;https://www.r-graph-gallery.com/index.html&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
