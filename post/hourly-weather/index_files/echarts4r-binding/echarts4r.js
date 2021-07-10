@@ -9,6 +9,24 @@ HTMLWidgets.widget({
     var initialized = false;
 
     var chart,opts;
+
+    const evalFun = (sourceOpts) => {
+      let opts = Object.assign({}, sourceOpts);
+      Object.keys(opts).forEach((key) => {
+        if (opts[key] !== null) {
+          if (typeof opts[key] === 'object') {
+            evalFun(opts[key]);
+            return;
+          }
+          if (typeof opts[key] === 'string') {
+            try {
+              opts[key] = eval('(' + opts[key] + ')');
+            } catch { }
+          }
+        }
+      });
+      return(opts);
+    }
     
     return {
 
@@ -23,13 +41,14 @@ HTMLWidgets.widget({
           initialized = true;
           if(x.theme2 === true){
             var th = JSON.parse(x.customTheme);
-            echarts.registerTheme(x.theme, th);
+            echarts.registerTheme(x.theme_name, th);
           }
           
-          if(x.hasOwnProperty('registerMap')){
-            for( var map = 0; map < x.registerMap.length; map++){
-              echarts.registerMap(x.registerMap[map].mapName, x.registerMap[map].geoJSON);
-            }
+        }
+
+        if(x.hasOwnProperty('registerMap')){
+          for( var map = 0; map < x.registerMap.length; map++){
+            echarts.registerMap(x.registerMap[map].mapName, x.registerMap[map].geoJSON);
           }
         }
         
@@ -39,11 +58,10 @@ HTMLWidgets.widget({
         
         chart = echarts.init(document.getElementById(el.id), x.theme, {renderer: x.renderer});
         
-        opts = x.opts;
+        opts = evalFun(x.opts);
         
         if(x.draw === true)
           chart.setOption(opts);
-        
         
         // shiny callbacks
         if (HTMLWidgets.shinyMode) {
@@ -67,20 +85,18 @@ HTMLWidgets.widget({
           
           if(x.hasOwnProperty('capture')){
             chart.on(x.capture, function(e){
-              Shiny.onInputChange(el.id + '_' + x.capture + ":echarts4rParse", e);
+              Shiny.onInputChange(el.id + '_' + x.capture + ":echarts4rParse", e, {priority: 'event'});
             });
           }
           
           chart.on("click", function(e){
-            Shiny.onInputChange(el.id + '_clicked_data' + ":echarts4rParse", e.data);
-            Shiny.onInputChange(el.id + '_clicked_data_value' + ":echarts4rParse", e.data.value);
-            Shiny.onInputChange(el.id + '_clicked_row' + ":echarts4rParse", e.dataIndex + 1);
-            Shiny.onInputChange(el.id + '_clicked_serie' + ":echarts4rParse", e.seriesName);
+            Shiny.onInputChange(el.id + '_clicked_data' + ":echarts4rParse", e.data, {priority: 'event'});
+            Shiny.onInputChange(el.id + '_clicked_row' + ":echarts4rParse", e.dataIndex + 1, {priority: 'event'});
+            Shiny.onInputChange(el.id + '_clicked_serie' + ":echarts4rParse", e.seriesName, {priority: 'event'});
           });
           
           chart.on("mouseover", function(e){
             Shiny.onInputChange(el.id + '_mouseover_data' + ":echarts4rParse", e.data);
-            Shiny.onInputChange(el.id + '_mouseover_data_value' + ":echarts4rParse", e.data.value);
             Shiny.onInputChange(el.id + '_mouseover_row' + ":echarts4rParse", e.dataIndex + 1);
             Shiny.onInputChange(el.id + '_mouseover_serie' + ":echarts4rParse", e.seriesName);
           });
@@ -183,7 +199,7 @@ HTMLWidgets.widget({
       resize: function(width, height) {
 
         if(chart){
-          chart.resize();
+          chart.resize({width: width, height: height});
         }
 
       }
@@ -293,17 +309,21 @@ if (HTMLWidgets.shinyMode) {
   
   Shiny.addCustomMessageHandler('e_focus_node_adjacency_p',
     function(data) {
-      var chart = get_e_charts(data.id);
+      var chart = get_e_charts(data[0].id);
       if (typeof chart != 'undefined') {
-        chart.dispatchAction(data.opts);
+        data.forEach(function(highlight){
+          chart.dispatchAction(highlight.opts);
+        })
       }
   });
   
   Shiny.addCustomMessageHandler('e_unfocus_node_adjacency_p',
     function(data) {
-      var chart = get_e_charts(data.id);
+      var chart = get_e_charts(data[0].id);
       if (typeof chart != 'undefined') {
-        chart.dispatchAction(data.opts);
+        data.forEach(function(highlight){
+          chart.dispatchAction(highlight.opts);
+        })
       }
   });
   
@@ -312,6 +332,29 @@ if (HTMLWidgets.shinyMode) {
       var chart = get_e_charts(data.id);
       if (typeof chart != 'undefined') {
         chart.dispatchAction(data.opts);
+      }
+  });
+
+  Shiny.addCustomMessageHandler('e_register_map',
+    function(data) {
+      if (typeof chart != 'undefined') {
+        $.ajax({ 
+          url: x.geoJSON, 
+          dataType: 'json', 
+          async: x.mapAsync,
+          success: function(json){ 
+            echarts.registerMap(x.mapName, json);
+          } 
+        });
+        
+      }
+  });
+
+  Shiny.addCustomMessageHandler('e_resize',
+    function(data) {
+      var chart = get_e_charts(data.id);
+      if (typeof chart != 'undefined') {
+        chart.resize();
       }
   });
 
@@ -376,6 +419,15 @@ if (HTMLWidgets.shinyMode) {
           opts.series = opts.series.splice(data.index, 1);
 
         chart.setOption(opts, true);
+      }
+  });
+
+  Shiny.addCustomMessageHandler('e_merge_p',
+    function(data) {    
+      // called by e_merge, add marks to serie
+      var chart = get_e_charts(data.id);
+      if (typeof chart != 'undefined') {
+        chart.setOption(data.opts); 
       }
   });
   

@@ -5,12 +5,53 @@
     <link>/tag/visualization/</link>
       <atom:link href="/tag/visualization/index.xml" rel="self" type="application/rss+xml" />
     <description>visualization</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Wei Li ©2021 </copyright><lastBuildDate>Fri, 18 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Wei Li ©2021 </copyright><lastBuildDate>Sat, 10 Jul 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu8fa43e4483d02e4bfdf294b3386ef244_148313_512x512_fill_lanczos_center_2.png</url>
       <title>visualization</title>
       <link>/tag/visualization/</link>
     </image>
+    
+    <item>
+      <title>Rainfall in 2021 summer</title>
+      <link>/post/rainfall-in-2021-summer/</link>
+      <pubDate>Sat, 10 Jul 2021 00:00:00 +0000</pubDate>
+      <guid>/post/rainfall-in-2021-summer/</guid>
+      <description>
+&lt;script src=&#34;/post/rainfall-in-2021-summer/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;今年2021夏天的降雨比平时多很多正好手头上有收集的降雨数据于是稍作分析展示出来&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;今年（2021）夏天的降雨比平时多很多，正好手头上有收集的降雨数据。于是稍作分析，展示出来。&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;记得往年的汛期都是7月中下旬（有历史数据为证），然而今年6月底到7月初的降雨已经超过XX毫米啦！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/wellionx/myimg/raw/master/%E5%8C%97%E4%BA%AC%E6%B1%9B%E6%9C%9F_%E4%B8%83%E4%B8%8B%E5%85%AB%E4%B8%8A.jpg&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;下面情况今年北京的降雨情况分析&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;下面情况今年北京的降雨情况分析。&lt;/h4&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(pre, aes(x = Datetime, y = PRE_sum)) + 
+  geom_line() +
+  scale_x_datetime(date_labels = &amp;quot;%b %d&amp;quot;, date_breaks = &amp;quot;3 days&amp;quot;,) +
+  theme_cowplot() + mytheme +
+  theme(axis.text.x = element_text(angle=45, hjust = 1)) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/rainfall-in-2021-summer/index_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如图所见，6月初累计降雨已达近150毫米，而且最近两周降雨强度较大（如下图）。&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(PRE.daily, aes(x = Date, y = PRE_daily)) + geom_col() +
+  scale_x_date(date_breaks = &amp;quot;2 days&amp;quot;, labels = date_format(&amp;quot;%b %d&amp;quot;)) +
+  scale_y_continuous(expand = expansion()) +
+  # Two weeks
+  geom_point(aes(y = PRE_sum14d),size = 3) +
+  geom_line(aes(y = PRE_sum14d)) +
+  geom_label_repel(aes(y = PRE_sum14d,label = label14d),
+                   nudge_x = 1,
+                   #nudge_y = 2,
+                   box.padding = unit(1.2, &amp;quot;lines&amp;quot;),
+                   na.rm = TRUE) +
+  theme_cowplot() +theme(axis.text.x = element_text(angle=45, hjust = 1)) +
+  mytheme&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/rainfall-in-2021-summer/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Visualization of history daily weather</title>
