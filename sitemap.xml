@@ -20,19 +20,28 @@
     <loc>/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tag/academic/</loc>
+    <lastmod>2021-09-09T14:24:36+08:00</lastmod>
+  </url><url>
     <loc>/categories/</loc>
-    <lastmod>2021-07-10T19:25:42+08:00</lastmod>
+    <lastmod>2021-09-09T14:24:36+08:00</lastmod>
+  </url><url>
+    <loc>/tag/plot/</loc>
+    <lastmod>2021-09-09T14:24:36+08:00</lastmod>
   </url><url>
     <loc>/post/</loc>
-    <lastmod>2021-07-10T19:25:42+08:00</lastmod>
+    <lastmod>2021-09-09T14:24:36+08:00</lastmod>
   </url><url>
     <loc>/category/r/</loc>
-    <lastmod>2021-07-10T19:25:42+08:00</lastmod>
-  </url><url>
-    <loc>/post/rainfall-in-2021-summer/</loc>
-    <lastmod>2021-07-10T19:25:42+08:00</lastmod>
+    <lastmod>2021-09-09T14:24:36+08:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
+    <lastmod>2021-09-09T14:24:36+08:00</lastmod>
+  </url><url>
+    <loc>/post/the-key-steps-of-protein-content-visualizaiton-through-hsi/</loc>
+    <lastmod>2021-09-09T14:24:36+08:00</lastmod>
+  </url><url>
+    <loc>/post/rainfall-in-2021-summer/</loc>
     <lastmod>2021-07-10T19:25:42+08:00</lastmod>
   </url><url>
     <loc>/tag/visualization/</loc>
@@ -71,9 +80,6 @@
     <loc>/tag/winter-wheat/</loc>
     <lastmod>2021-04-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tag/academic/</loc>
-    <lastmod>2020-12-18T20:15:02+08:00</lastmod>
-  </url><url>
     <loc>/post/draw-wheat-chart-in-r/</loc>
     <lastmod>2020-12-18T20:15:02+08:00</lastmod>
   </url><url>
@@ -85,9 +91,6 @@
   </url><url>
     <loc>/post/linking-spectra-to-genetic-diversity/</loc>
     <lastmod>2020-07-25T21:16:12+08:00</lastmod>
-  </url><url>
-    <loc>/tag/plot/</loc>
-    <lastmod>2020-12-18T20:15:02+08:00</lastmod>
   </url><url>
     <loc>/tag/r/</loc>
     <lastmod>2020-12-18T12:42:37+08:00</lastmod>
