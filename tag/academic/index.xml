@@ -60,9 +60,10 @@
       <pubDate>Fri, 18 Dec 2020 00:00:00 +0000</pubDate>
       <guid>/post/draw-wheat-chart-in-r/</guid>
       <description>
+&lt;script src=&#34;/post/draw-wheat-chart-in-r/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/wellionx/myimg/raw/master/7%20wheat%20plots.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/wellionx/myimg/raw/master/NC-variation_spatial-and-temperal.jpg&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;前几天，在微信公众号里看到有个R包（gganatogram) 可以画动物和植物的图形，但是里面的小麦不好看。于是把我用R画的小麦分享出来，比一比哪个更好看😜。&lt;/p&gt;
 &lt;p&gt;话不多说，先上图。
 &lt;img src=&#34;https://gitee.com/wellionx/myimg/raw/master/img1.png&#34; /&gt;&lt;/p&gt;
@@ -77,9 +78,9 @@
 &lt;p&gt;多边形创建采用了专门处理gis数据的R包sf。&lt;/p&gt;
 &lt;p&gt;最后的成品就是前面看到的这个样子了。每一个部分都可以根据自己的需求填上任意的颜色。而且颜色也可以根据需求自己选择，颜色的深浅代表指标的高低。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://gitee.com/wellionx/myimg/raw/master/img5.png&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;index_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/post/draw-wheat-chart-in-r/index_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;
 也可以给每个部分添加标签，放上对应的数据。这样看起来好是不是好很多。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;index_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/draw-wheat-chart-in-r/index_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;再来一张动图看看。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://gitee.com/wellionx/myimg/raw/master/mygif.gif&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;好吧，最后公布一下那个R包里面的小麦。貌似也没那么难看 😄&lt;/p&gt;
