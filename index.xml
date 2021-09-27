@@ -75,6 +75,22 @@
     </item>
     
     <item>
+      <title>Contact</title>
+      <link>/contact/</link>
+      <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>/contact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sorghum grain nutrients measurement using NIR</title>
+      <link>/publication/sorghum-grain-nutrients-measurement-using-nir/</link>
+      <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/sorghum-grain-nutrients-measurement-using-nir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>The key steps of protein content visualizaiton through HSI</title>
       <link>/post/the-key-steps-of-protein-content-visualizaiton-through-hsi/</link>
       <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
@@ -462,9 +478,9 @@ fviz_gap_stat(res.km$gap_stat)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Food Chemistry | 基于高光谱预测小麦籽粒微量营养</title>
-      <link>/post/2020-12-18-food-chemistry-%E4%BA%8E%E9%AB%98%E5%85%89%E8%B0%B1%E9%A2%84%E6%B5%8B%E5%B0%8F%E9%BA%A6%E7%B1%BD%E7%B2%92%E5%BE%AE%E9%87%8F%E8%90%A5%E5%85%BB/</link>
+      <link>/post/2020-12-18-food-chemistry/</link>
       <pubDate>Mon, 23 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>/post/2020-12-18-food-chemistry-%E4%BA%8E%E9%AB%98%E5%85%89%E8%B0%B1%E9%A2%84%E6%B5%8B%E5%B0%8F%E9%BA%A6%E7%B1%BD%E7%B2%92%E5%BE%AE%E9%87%8F%E8%90%A5%E5%85%BB/</guid>
+      <guid>/post/2020-12-18-food-chemistry/</guid>
       <description>&lt;p&gt;这是发表的小麦联盟公众号上的推文，搬运至此，记录一下。同时也为自己做一波广告。这是开展表型研究的第一篇文章。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;小麦作为主要粮食作物，其含有多种人类健康所需微量营养素。然而现有的小麦品种微量营养含量不能够满足人体的营养需求，因此，一些以小麦为主食的发展中国家“隐性饥饿”问题尤为严重。据统计，全球共有20亿人患有一种或多种慢性微量营养素缺乏症，其中我国占15%。因此，通过技术手段进一步提高小麦的微量营养含量、为全世界的人们提供高营养品质的小麦显得尤为重要。&lt;/p&gt;
