@@ -135,8 +135,10 @@
 &lt;/div&gt;
 &lt;div id=&#34;开发r包&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;3. 开发R包&lt;/h3&gt;
-&lt;p&gt;有了以上的实施思想和实现过程，剩下的就是用R包开发的软件将这些函数打包。统计之都网站有一篇博客介绍了&lt;a href=&#34;https://cosx.org/2013/11/building-r-packages-easily&#34;&gt;R包的建立方法&lt;/a&gt;。另外，也有一些开发R包的工具，包括&lt;code&gt;pkgdown&lt;/code&gt;等。
-R包开发的过程就是将各种函数写入打包调试的过程。&lt;/p&gt;
+&lt;p&gt;有了以上的实施思想和实现过程，剩下的就是用R包开发的软件将这些函数打包。统计之都网站有一篇博客介绍了&lt;a href=&#34;https://cosx.org/2013/11/building-r-packages-easily&#34;&gt;R包的建立方法&lt;/a&gt;。另外，也有一些开发R包的工具，包括&lt;code&gt;pkgdown&lt;/code&gt;等。&lt;/p&gt;
+&lt;p&gt;R包开发的过程就是将各种函数写入打包调试的过程。
+&lt;img src=&#34;https://gitee.com/wellionx/myimg/raw/master/R_pkg_dev.jpg&#34; /&gt;
+目前已经创建好R包开发的项目，接下来就根据前面实现的功能将其转换成函数写入到R包中。&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
